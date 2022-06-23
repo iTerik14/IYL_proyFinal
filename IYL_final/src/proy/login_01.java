@@ -18,6 +18,7 @@ public class login_01 extends javax.swing.JFrame {
      */
     public login_01() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -65,7 +66,7 @@ public class login_01 extends javax.swing.JFrame {
             }
         });
 
-        salir.setText("Salir");
+        salir.setText("Exit");
         salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salirActionPerformed(evt);
@@ -129,16 +130,66 @@ public class login_01 extends javax.swing.JFrame {
 
     private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
         // TODO add your handling code here:
-
-    }//GEN-LAST:event_registrarActionPerformed
-
-    private void ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarActionPerformed
-        // TODO add your handling code here:
-        FormVacio formulario1 = new FormVacio();
+        reguistro formulario1 = new reguistro();
         //para abrir otrop formulario
         formulario1.setVisible(true);
         //centramos la ventana
         this.dispose();
+    }//GEN-LAST:event_registrarActionPerformed
+
+    private void ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarActionPerformed
+        // TODO add your handling code here:
+        String usuaEnc = "ch0qu1t0";
+        String passEnc = "ju4n1t0";
+
+        String passw = pass.getText(); // cuerpo
+        String usuar = usua.getText(); // choquito
+
+        //user
+        usuar = usuar.replace("a", "4");
+        usuar = usuar.replace("e", "3");
+        usuar = usuar.replace("i", "1");
+        usuar = usuar.replace("o", "0");
+        
+        //password
+        passw = passw.replace("a", "4");
+        passw = passw.replace("e", "3");
+        passw = passw.replace("i", "1");
+        passw = passw.replace("o", "0");
+        
+        
+        /*
+        String[] cadena;
+        cadena = passw.split("");
+
+        String pas = "";
+
+        for (String s : cadena) {
+            if (s.equals("a")) {
+                pas += s + "i";
+            } else {
+                if (s.equals("o")) {
+                    pas = pas + s + "u";
+                } else {
+                    if (s.equals("o")) {
+                        
+                    }
+                    pas = pas + s;
+                }
+            }
+        }
+        */
+        //cueirpou
+
+        if ((passw.equals(passEnc)) && (usuaEnc.equals(usuar))) {
+            Ingreso r = new Ingreso();
+            //para abrir otrop formulario
+            r.setVisible(true);
+            //centramos la ventana
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "No puedes ingresar");
+        }
     }//GEN-LAST:event_ingresarActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
@@ -148,39 +199,7 @@ public class login_01 extends javax.swing.JFrame {
 
     private void registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registrarMouseClicked
         // TODO add your handling code here:
-        String usuaEnc = "choquito";
-        String passEnc = "cueirpou";
-
-        String passw = pass.getText(); // cuerpo
-        String usuar = usua.getText(); // choquito
-
-        String[] cadena;
-        cadena = passw.split("");
-
-        String pas = "";
-
-        for (String s : cadena) {
-            if (s.equals("e")) {
-                pas += s + "i";
-            } else {
-                if (s.equals("o")) {
-                    pas = pas + s + "u";
-                } else {
-                    pas = pas + s;
-                }
-            }
-        }
-        //cueirpou
-
-        if ((pas.equals(passEnc)) && (usuaEnc.equals(usuar))) {
-            reguistro r = new reguistro();
-            //para abrir otrop formulario
-            r.setVisible(true);
-            //centramos la ventana
-            this.dispose();
-        } else {
-            JOptionPane.showMessageDialog(null, "No puedes ingresar");
-        }
+        
     }//GEN-LAST:event_registrarMouseClicked
 
     /**
@@ -214,6 +233,7 @@ public class login_01 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new login_01().setVisible(true);
+                
             }
         });
     }
