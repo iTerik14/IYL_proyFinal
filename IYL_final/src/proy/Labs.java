@@ -5,8 +5,13 @@
  */
 package proy;
 
+import javax.swing.JOptionPane;
 import lab01.Lab1;
 import lab10.labo10;
+import lab5.Lab5;
+import lab7.JMatrizGusaito;
+import lab8.Labo08;
+import lab9.Labo09;
 
 /**
  *
@@ -69,6 +74,11 @@ public class Labs extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton6.setText("lab 5");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton7.setText("lab 4");
@@ -83,12 +93,27 @@ public class Labs extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton8.setText("lab 7");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton9.setText("lab 8");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton10.setText("lab 9");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton11.setText("lab 10");
@@ -177,6 +202,7 @@ public class Labs extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Suma de Matriz, Hecho a mano");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -200,6 +226,41 @@ public class Labs extends javax.swing.JFrame {
         //centramos la ventana
         this.dispose();
     }//GEN-LAST:event_lab1ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        Labo09 formulario1 = new Labo09();
+        //para abrir otrop formulario
+        formulario1.setVisible(true);
+        //centramos la ventana
+        this.dispose();
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        Labo08 formulario1 = new Labo08();
+        //para abrir otrop formulario
+        formulario1.setVisible(true);
+        //centramos la ventana
+        this.dispose();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        JMatrizGusaito formulario1 = new JMatrizGusaito();
+        //para abrir otrop formulario
+        formulario1.setVisible(true);
+        //centramos la ventana
+        this.dispose();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Lab5 formulario1 = new Lab5();
+        //para abrir otrop formulario
+        formulario1.setVisible(true);
+        //centramos la ventana
+        this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
