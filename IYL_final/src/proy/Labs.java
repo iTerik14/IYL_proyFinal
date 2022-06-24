@@ -7,16 +7,13 @@ package proy;
 
 import javax.swing.JOptionPane;
 import lab01.Lab1;
+import lab04.labo4;
 import lab10.labo10;
 import lab5.Lab5;
 import lab7.JMatrizGusaito;
 import lab8.Labo08;
 import lab9.Labo09;
 
-/**
- *
- * @author mari
- */
 public class Labs extends javax.swing.JFrame {
 
     /**
@@ -82,6 +79,11 @@ public class Labs extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton7.setText("lab 4");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         lab1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         lab1.setText("lab 1");
@@ -193,7 +195,7 @@ public class Labs extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Ingreso l = new Ingreso();
+        ing l = new ing();
         //para abrir otrop formulario
         l.setVisible(true);
         //centramos la ventana
@@ -261,6 +263,15 @@ public class Labs extends javax.swing.JFrame {
         //centramos la ventana
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        labo4 formulario1 = new labo4();
+        //para abrir otrop formulario
+        formulario1.setVisible(true);
+        //centramos la ventana
+        this.dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
