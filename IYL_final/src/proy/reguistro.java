@@ -13,6 +13,8 @@ public class reguistro extends javax.swing.JFrame {
     /**
      * Creates new form reguistro
      */
+    int [] usuario;
+    int a;
     public reguistro() {
         initComponents();
         setLocationRelativeTo(null);
@@ -167,7 +169,21 @@ public class reguistro extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String usuario = user.getText();
+        
+        if (a==) {
+            a = 0;
+        }
+        usuario = new int[a+1];
+        
+        usuario[a-1] = Integer.parseInt(user.getText());
+        a++;
+        
+        
+        String contra = pass.getText();
+        String nombre = name.getText();
+        String apellido = lastname.getText();
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
